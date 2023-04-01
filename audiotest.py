@@ -7,6 +7,7 @@ BITRATE = 44100        # Audio Bitrate
 CHUNK_SIZE = 512       # Chunk size to 
 RECORDING_LENGTH = 10  # Recording Length in seconds
 WAVE_OUTPUT_FILENAME = "myrecording.wav"
+print("HERE")
 audio = pyaudio.PyAudio()
 print("A")
 info = audio.get_host_api_info_by_index(0)
