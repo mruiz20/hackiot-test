@@ -1,16 +1,25 @@
 import pyaudio
 import wave
 
+print("1")
 FORMAT = pyaudio.paInt16
+print("1")
 CHANNELS = 1           # Number of channels
+print("1")
 BITRATE = 44100        # Audio Bitrate
+print("1")
 CHUNK_SIZE = 512       # Chunk size to 
+print("1")
 RECORDING_LENGTH = 10  # Recording Length in seconds
+print("1")
 WAVE_OUTPUT_FILENAME = "myrecording.wav"
+print("1")
 audio = pyaudio.PyAudio()
 
 info = audio.get_host_api_info_by_index(0)
+print("1")
 numdevices = info.get('deviceCount')
+print("1")
 for i in range(0, numdevices):
     if (audio.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels')) > 0:
         print("Input Device id ", i, " - ", audio.get_device_info_by_host_api_device_index(0, i).get('name'))
